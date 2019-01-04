@@ -53,7 +53,7 @@
          height:50px; 
          line-height:50px; 
          position:relative;
-         width:770px;
+         width:840px;
          margin:auto;
          margin-top:70px;
      }
