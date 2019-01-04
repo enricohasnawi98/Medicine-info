@@ -121,6 +121,7 @@
                     <li><a href="/MedicineInfo">Medicine Info</a></li>
                     <li><a href="/Aboutus">About Us</a></li>
                     <li><a href="/ViewCompareDrug">Compare Drug</a></li>
+                    <li><a href="/ScannDrug">Scan Original Drug</a></li>
                         
                     
                 </ul>
