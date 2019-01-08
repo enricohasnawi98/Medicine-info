@@ -17,7 +17,7 @@ class MedicineInfoController extends Controller
 
     public function searchProduct(Request $request)
     {   
-        $drug = Drug::where('Name','LIKE','%'.$request->search.'%')->paginate(8);
+        $drug = Drug::where('Name','LIKE','%'.$request->search.'%')->orWhere('Desc','LIKE','%'.$request->search.'%')->paginate(8);
         return view('MedicineInfo',compact('drug'));
     }
 

@@ -6,7 +6,7 @@
 		<form action="{{ url('/doSearch') }}" method="GET">
 			<div style="float:right; margin-right:10%;"><input type="submit" value="Search" class="btn btn-default"></div>
 			<div style="float:right; margin-right:2%;">
-				<input type="search" name="search" id="sSearch" placeholder="Search By Name"  class="form-control" >
+				<input type="search" name="search" id="sSearch" placeholder="Search By Name or disease"  class="form-control" >
 				
 			</div>
 			<br>
