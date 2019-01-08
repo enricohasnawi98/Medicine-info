@@ -54,3 +54,7 @@ Route::get('newCompare/','MedicineInfoController@newCompareProduct');
 
 // Route::get('/doCompare2/{isShow}/{isShow2}/{src1}','MedicineInfoController@compareProduct2');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
