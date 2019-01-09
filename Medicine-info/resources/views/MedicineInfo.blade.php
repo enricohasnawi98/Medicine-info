@@ -29,15 +29,15 @@
 				<th>Detail</th>
 			</tr>
 			@foreach($drug as $d)
+			<col width="17%" />    
 			<col width="10%" />    
-			<col width="10%" />    
-			<col width="50%" />
+			<col width="40%" />
 			<col width="10%" />
 			<col width="10%" />    
 			<col width="10%" />    
 			<col width="10%" />
 			<tr>
-				<td><img width="50px" height="50px" src="{{url($d->ImageUrl)}}" style="margin-right:4px; margin-top:4px; margin-down:4px;"></td>
+				<td><img width="150px" height="150px" src="{{url($d->ImageUrl)}}" style="margin-right:4px; margin-top:4px; margin-down:4px;"></td>
 				<td>{{$d->Name}}</td>
 				<td>{{$d->Desc}}</td>
 				<td>{{$d->Brand}}</td>
