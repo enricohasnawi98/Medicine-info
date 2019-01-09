@@ -104,7 +104,7 @@
 
                             <!-- <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li> -->
                     @endif
-                    <li> <a href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                    <li style="padding-left:33%;"> <a href="{{ route('login') }}">{{ __('Login') }}</a></li>
                 @else
 
                     <li><a href="/">Home</a></li>
