@@ -38,8 +38,8 @@
                         @else
                         <tr>
                             <td>Image</td>
-                            <td><img width="50px" height="50px" src="{{url($toReturn['drug1']['ImageUrl'])}}" style="margin-right:4px; margin-top:4px; margin-down:4px;"></td>
-                            <td><img width="50px" height="50px" src="{{url($toReturn['drug2']['ImageUrl'])}}" style="margin-right:4px; margin-top:4px; margin-down:4px;"></td>
+                            <td><img width="170px" height="170px" src="{{url($toReturn['drug1']['ImageUrl'])}}" style="margin-right:4px; margin-top:4px; margin-down:4px;"></td>
+                            <td><img width="170px" height="170px" src="{{url($toReturn['drug2']['ImageUrl'])}}" style="margin-right:4px; margin-top:4px; margin-down:4px;"></td>
                         </tr>
                         <tr>
                             <td>Name</td>
