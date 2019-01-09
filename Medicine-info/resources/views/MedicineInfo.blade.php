@@ -1,108 +1,12 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+@extends('layouts.app')
 
-	<title>About US-MedicineInfo</title>
-	
-	<title>About us</title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-
-
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-	
-	
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/flexslider.css">
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<link rel="stylesheet" href="css/style.css">
-
-	
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	
-
-	</head>
-	<body>
-	
-	<div id="page">
-	<nav class="colorlib-nav" role="navigation">
-		<div class="top-menu">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="top">
-							<div class="row">
-								<div class="col-md-6">
-									<div id="colorlib-logo"><a href="/">Medicine<span>Info</span></a></div>
-								</div>
-								<div class="col-md-3">
-									<div class="num">
-										<span class="icon"><i class="icon-phone"></i></span>
-										<p><a href="#">+62-11-2222-3333
-</a><br><a href="#">+62-22-1111-2222</a></p>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="loc">
-										<span class="icon"><i class="icon-location"></i></span>
-										<p><a href="#">Medicine Info Tower</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="menu-wrap">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-8">
-							<div class="menu-1">
-								<ul>
-									<li><a href="/">Home</a></li>
-									
-									<li class="active"><a href="/MedicineInfo">Medicine Info</a></li>
-									
-									<li><a href="/Aboutus">About Us</a></li>
-
-									<li><a href="/ViewCompareDrug">Compare Drug</a></li>
-
-									<li><a href="/ScannDrug">Scan Original Drug</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-    
+@section('content')
 	<div style=" margin-left:9%; margin-top:0.5%;">
 		<!-- ini baru contoh nanti tolong ganti jadi foreach dari database -->
 		<form action="{{ url('/doSearch') }}" method="GET">
 			<div style="float:right; margin-right:10%;"><input type="submit" value="Search" class="btn btn-default"></div>
 			<div style="float:right; margin-right:2%;">
-				<input type="search" name="search" id="sSearch" placeholder="Search By Name"  class="form-control" >
+				<input type="search" name="search" id="sSearch" placeholder="Search By Name or disease"  class="form-control" >
 				
 			</div>
 			<br>
@@ -153,3 +57,5 @@
 
 </body>
 </html>
+
+@endsection

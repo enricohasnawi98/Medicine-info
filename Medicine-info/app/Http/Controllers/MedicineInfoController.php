@@ -17,7 +17,7 @@ class MedicineInfoController extends Controller
 
     public function searchProduct(Request $request)
     {   
-        $drug = Drug::where('Name','LIKE','%'.$request->search.'%')->paginate(8);
+        $drug = Drug::where('Name','LIKE','%'.$request->search.'%')->orWhere('Desc','LIKE','%'.$request->search.'%')->paginate(8);
         return view('MedicineInfo',compact('drug'));
     }
 
@@ -67,18 +67,18 @@ class MedicineInfoController extends Controller
     public function newCompareProduct()
     {
         parse_str($_SERVER['QUERY_STRING'], $queries);
+
         $firstQuery = $queries['search1'];
         $secondQuery = $queries['search2'];
-        $isShow = 'true';
         
         $drug1 = Drug::where('Name','LIKE','%'.$firstQuery.'%')->first();
         $drug2 = Drug::where('Name','LIKE','%'.$secondQuery.'%')->first();
 
-        if($drug1 == null)
-            $drug1 = Drug::where('Name','LIKE',$firstQuery)->first();
-            //$drug1 = DB::table('Drugs')->where('Name', $firstQuery)->first();
-        if($drug2 == null)
-            $drug2 = Drug::where('Name','LIKE',$secondQuery)->first();
+        // if($drug1 == null)
+        //     $drug1 = Drug::where('Name','LIKE',$firstQuery)->first();
+        //     //$drug1 = DB::table('Drugs')->where('Name', $firstQuery)->first();
+        // if($drug2 == null)
+        //     $drug2 = Drug::where('Name','LIKE',$secondQuery)->first();
 
         $toReturn = compact('drug1','drug2');
         //dd($toReturn);
@@ -99,6 +99,7 @@ class MedicineInfoController extends Controller
         }
         else
         {
+            $isShow = 'true';
             return view('newCompare',compact('isShow'), compact('toReturn'));
         }
         
