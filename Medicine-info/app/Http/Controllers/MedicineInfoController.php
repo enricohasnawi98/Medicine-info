@@ -105,7 +105,7 @@ class MedicineInfoController extends Controller
         
     }
 
-    public function insertDrug(Request $request)
+    public function doInsertDrug(Request $request)
     {
         //Custom Message
         $message = [
@@ -141,14 +141,14 @@ class MedicineInfoController extends Controller
             $file->move('MsPhoto/',$filename);
         }
 
-        $drug = new drugs();
+        $drug = new Drug();
         //$photos->id = $request->user_id;
         $drug->Name = $request->Name;
         $drug->Desc = $request->Desc;
         //harus di substring
         $drug->ImageUrl = $file->getClientOriginalName();
         $drug->Brand = $request->Brand;
-        $drug->Type = $reqest->Type;
+        $drug->Type = $request->Type;
         $drug->AvgPrice = $request->AvgPrice;
         $drug->General = $request->General;
  

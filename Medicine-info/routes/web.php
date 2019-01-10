@@ -35,6 +35,11 @@ Route::get('/ViewCompareDrug', function(){
     return view('newCompare',compact('isShow'));
 });
 
+Route::get('/InsertDrug',function()
+{
+    return view('insertmedicine');
+});
+Route::post('/doInsertDrug','MedicineInfoController@doInsertDrug');
 //Route::get('/ReturnCompareDrug', 'MedicineInfoController@ifblade');
 
 Route::get('/MedicineInfo','MedicineInfoController@ShowData');
