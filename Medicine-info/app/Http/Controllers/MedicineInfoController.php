@@ -104,4 +104,59 @@ class MedicineInfoController extends Controller
         }
         
     }
+
+    public function insertDrug(Request $request)
+    {
+        //Custom Message
+        $message = [
+            'Name.required' => 'drug name must be filled',
+            'Name.between' => 'drug length must between 3-20 character',
+            'Desc.required' => 'Description must be filled',
+            'Brand.required' => 'Brand must be filled',
+            'Type.required' => 'Type must be filled',
+            'AvgPrice.required' => 'Price must be filled',
+            'General.required'=>'General must be filled'
+        ];
+
+        //Validasi
+        $validator = Validator::make($request->all(),[
+            'Name' => 'required|between:3 , 20',
+            'Desc' => 'required',
+            'ImageUrl'=>'required',
+            'Brand' => 'required',
+            'Type' => 'required',
+            'AvgPrice' => 'required',
+            'General' => 'required'
+        ],$message);
+
+        if($validator->fails())
+        {
+            return back()->withErrors($validator);
+        }
+
+        if($request->hasFile('ImageUrl'))
+        {
+            $file = $request->ImageUrl;
+            $filename = $file->getClientOriginalName();
+            $file->move('MsPhoto/',$filename);
+        }
+
+        $drug = new drugs();
+        //$photos->id = $request->user_id;
+        $drug->Name = $request->Name;
+        $drug->Desc = $request->Desc;
+        //harus di substring
+        $drug->ImageUrl = $file->getClientOriginalName();
+        $drug->Brand = $request->Brand;
+        $drug->Type = $reqest->Type;
+        $drug->AvgPrice = $request->AvgPrice;
+        $drug->General = $request->General;
+ 
+
+       // dd($photos);
+        $drug->save();
+        return redirect('MedicineInfo');
+
+    }
+
 }
