@@ -1,11 +1,17 @@
+<style>
+    input
+    {
+        padding-right:30%;
+    }
+</style>
 @extends('layouts.app')
 
-@section('content')           
+@section('content')      
 <center>
         <form action="{{url('/doInsertDrug')}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
             <div class="container">
-            <table>
+            <table width="50%">
 
                 <tr>
                     <td>Name : </td>

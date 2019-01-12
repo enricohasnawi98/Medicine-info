@@ -138,7 +138,8 @@ class MedicineInfoController extends Controller
         {
             $file = $request->ImageUrl;
             $filename = $file->getClientOriginalName();
-            $file->move('MsPhoto/',$filename);
+            $path = public_path();
+            $file->move($path,$filename);
         }
 
         $drug = new Drug();
