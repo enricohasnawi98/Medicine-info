@@ -47,6 +47,14 @@
             <br>
             <button type="submit" class="btn-Warning">Insert</button>
         </form>
+        {{--text error--}}
+    <div style="color:red;">
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                <br>{{ $error }}
+            @endforeach
+        @endif
+    </div>
     </center>
 
 @endsection
