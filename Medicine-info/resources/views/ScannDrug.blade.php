@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
 
     <center>
     <br>
@@ -11,7 +9,6 @@
         <!-- Div to show the scanner -->
         <div id="scanner-container" style="margin-left:500px;"></div>
     </center>    
-@endsection
 <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.js"></script>
 <script>
         var _scannerIsRunning = false;
